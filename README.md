@@ -35,3 +35,21 @@ My third attempt was to use the kerastuner to explore combinations of layers and
   *   Use Kerastuner to explore combinations of layers and functions
 
 ## Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+The overall results of the model were a little disappointing.  The original model from deliverable 2 gave the following results:
+
+![image](https://user-images.githubusercontent.com/90977689/153242425-b6f08936-18cf-4cfc-b9c0-7d100f664c7f.png)
+
+Attempt 1 yielded:
+
+![image](https://user-images.githubusercontent.com/90977689/153242658-56cc9d84-4ba5-47da-80b6-95277c915b5e.png)
+
+Attempt 2 yielded:
+
+![image](https://user-images.githubusercontent.com/90977689/153242780-fa0d5f33-e57e-4786-bcbf-6a27bf44ef45.png)
+
+Attempt 3 yielded:
+
+![image](https://user-images.githubusercontent.com/90977689/153242930-fded8c3b-485a-483f-afbf-a875f55e7192.png)
+
+As can be seen, all of the approaches landed with similar accuracy scores.  This isn't overly surprising given the data that was utilized as inputs.  What I would recommend is a couple of things.  First thing I noticed is the wide range of "ASK_AMT" with a predominance of data points being the lowest ask amount of $5000.  There are so many ask amounts - 5000 that this causes a situation where essentially every ask amount that is greater than 5,000 could be considered outliers.  I verified this with a boxplot analysis.  Interestingly though when I ran a model using a new dataframe containing only the 5,000 amount datarows, the accuracy of the nn model got worse.  I recommend using a random forest model to understand if there are any loose correlations within the dataset.  It might also be beneficial to run random forest models on the data where the dataset is subsetted by buckets of ask amount.
+
