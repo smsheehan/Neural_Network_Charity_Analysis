@@ -30,8 +30,8 @@ My third attempt was to use the kerastuner to explore combinations of layers and
 * Were you able to achieve the target model performance? I was not able to achieve the target model performance with the attempts mentioned above.
 
 * What steps did you take to try and increase model performance?
-*   Increase number of layers
-*   Change activation function
-*   Use Kerastuner to explore combinations of layers and functions
+  *   Increase number of layers
+  *   Change activation function
+  *   Use Kerastuner to explore combinations of layers and functions
 
 ## Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
